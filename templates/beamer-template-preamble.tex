@@ -1,0 +1,70 @@
+\documentclass{beamer}
+
+%#######################
+%	Configuring Beamer	#
+%#######################
+  
+% First of all, I generally like to use nicer fonts than Computer Modern.
+% I don't yet know exactly how this works, but the below command allows me to use non-standard, ``professional'' fonts.
+\usefonttheme{professionalfonts} 
+% By default serif fonts are disabled in beamer (maybe this is considered better in presentations?).
+% This can be changed with the line below.
+\usefonttheme{serif}
+% Now we are ready to enable a nice font
+\usepackage[osf]{libertine}
+% Next, let's set some structure theme
+% INSERT LINK HERE	
+\usetheme{Malmoe} % set beamer layout theme
+%\usecolortheme[named=green]{structure}  % set beamer color theme
+\usecolortheme{spruce} %spruce is a really nice theme!!
+% There are different ways to hide covered elements on slides.
+% The default is to make them completely invisible.
+% The behavior can be changed by the below command with the following options:
+% transparent, dynamic, very dynamic
+\setbeamercovered{dynamic}
+
+
+%#########################
+% References/Bibliography #
+%########################
+
+\usepackage[style=authoryear]{biblatex}
+\addbibresource{/home/ilia/ilia_dev/LaTeX/master.bib} % load bib file
+
+%################
+% Other Packages #
+%################
+\usepackage{enumerate} % the basics.
+
+\usepackage{tipa} % IPA symbols
+% To-do notes don't always play nice with beamer, so they are disabled by default. 
+%Uncomment this line to enable them, but be careful.
+%\usepackage{todonotes}
+% Load graphics support
+\usepackage{graphicx}
+\usepackage{tikz}
+
+
+%################
+% My Definitions #
+%################
+% Ideas: 
+% - custom two-column slide? gets used a lot and would be nice to be a little more succinct about it.
+
+% Stuff that's been useful before.
+\newcommand{\postag}[1]{\textcolor{green}{#1}}
+\newcommand{\problematic}[1]{\textcolor{red}{#1}}
+
+%############################
+% GB4E, has to be loaded last!! #
+%############################
+\usepackage{gb4e}
+% this disables the ``mathy'' behavior of _ and ^ in regular text mode.
+\noautomath
+
+%##################
+% Title Commands #
+%##################
+\title{Catchy Title}
+\author{Ilia Kurenkov}
+%\institute{}\textsl{}
